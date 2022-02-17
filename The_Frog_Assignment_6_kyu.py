@@ -6,7 +6,7 @@ def jump_to(x, y):
         div = y/2
         dif = y - div 
         if y%2 == 0 and dif >= x:
-            y = y/2
+            y = div
             remain -= y
         else:
             y = y - 1
