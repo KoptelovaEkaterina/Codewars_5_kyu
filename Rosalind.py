@@ -15,7 +15,6 @@ with open("rosalind_rna.txt") as file:
 from Bio.Seq import Seq
 
 seq = Seq(nucleotides)
-
 print(seq.reverse_complement())
   
 
