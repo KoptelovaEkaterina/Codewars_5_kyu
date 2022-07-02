@@ -113,7 +113,23 @@ while len(s)!=0:
     s.remove(min(s))
 print(*a)
 
-   
+
+# https://stepik.org/lesson/296963/step/8?unit=278691
+# The task is to sort the list in ascending order by sorting with inserts, in case the adjacent elements coincide, there is no need to change them. The answer is to output the sorted list.
+
+b=int(input())
+a= list(map(int,input().split()))
+count=0
+for j in range(1,b):
+    i=j-1
+    while i>=0:
+        if a[j]<a[i]:
+            a[j],a[i]=a[i],a[j]
+            j=j-1
+        i = i - 1
+print(*a)
+
+
 # while cycle
 # https://stepik.org/lesson/296615/step/8?unit=278349       
 # The program takes one natural number as an input and displays the product of digits of that number.
