@@ -44,9 +44,7 @@ for i in range (n):
     for j in range(1, m+1):
         s.append(b[i][-j])
 
-
 for j in range (n):
-
     for i in range(1,m+1):
 
         print(s[-i],end=' ')
@@ -54,6 +52,77 @@ for j in range (n):
  
     for i in range(m):
         s.pop()  
+
+
+# For cycle
+# https://stepik.org/lesson/296961/step/5?unit=278689
+# Finds the record number of occurrences (not necessarily consecutive) of a character in a string.
+
+st = input().lower()
+letters = []
+for l in st:
+    letters.append(st.count(l))
+print(max(letters))
+
+
+# https://stepik.org/lesson/296961/step/4?unit=278689
+# Find the smallest positive value in this list. If there are no positive values, print the line "Empty".
+
+t = list(map(int, input().split()))
+while  len(t) > 0 and min(t) <= 0:
+    t.remove(min(t))
+#    print(t)
+if len(t) == 0 or min(t) == 0:
+    print('Empty')
+elif min(t) > 0:
+    print(min(t))
+
+
+# https://stepik.org/lesson/296961/step/6?unit=278689
+# Check the divisibility of a given number by 11.
+
+n = input()
+b = []
+c = []
+for i in range(len(n)):
+    if i % 2 == 0:
+        b.append(n[i])
+    else:
+        c.append(n[i])
+bs = ''.join(b)
+cs = ''.join(c)
+q = [int(digit) for digit in bs]
+w = [int(digit) for digit in cs]
+if abs(sum(q) - sum(w))%11 == 0:
+    print('YES')
+else:
+    print('NO')
+
+
+    
+# https://stepik.org/lesson/296962/step/3?unit=278690
+# The program receives as input the number n - the number of elements in the list, then the elements of the list themselves.
+# You need to output a sorted list (without using the sorted function).    
+
+n = int(input())
+s = list(map(int,input().split()))
+
+a=[]
+while len(s)!=0:
+    a.append(min(s))
+    s.remove(min(s))
+print(*a)
+
+   
+# while cycle
+# https://stepik.org/lesson/296615/step/8?unit=278349       
+# The program takes one natural number as an input and displays the product of digits of that number.
+
+
+from functools import reduce
+from operator import mul
+a = list(map(int, input()))
+print(reduce(mul,a))
 
 
 
