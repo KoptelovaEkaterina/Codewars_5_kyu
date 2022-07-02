@@ -161,19 +161,19 @@ def count_letters(letter):
 # The check_password function, which checks the password passed to it for complexity and prints the result on the screen. A complex password is a combination of characters, in which : There are at least 3 digits. There is at least one uppercase letter. There is at least one character from the following set "!@#$%*". Total length is at least 10 characters. If the password passes all the checks, the function must display the phrase "Perfect password"; otherwise, it must display "Easy peasy".
 # Write  only the definition of the function count_letters.
 
-znaki='!@#$%*'
+signs='!@#$%*'
 b=[]
 z=[]
-bukvi=[]
+letters =[]
 def check_password(pas):
     for i in pas:
         if i.isdigit():
             b.append(i)
-        elif i in znaki:
+        elif i in signs:
             z.append(i)
         elif i>='A' and i<='Z':
-            bukvi.append(i)
-    if len(b)>=3 and len(z)>=1 and len(bukvi)>=1 and len(pas)>=10:
+            letters.append(i)
+    if len(b)>=3 and len(z)>=1 and len(letters)>=1 and len(pas)>=10:
         print('Perfect password')
     else:
         print('Easy peasy')    
