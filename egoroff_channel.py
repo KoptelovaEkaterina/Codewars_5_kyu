@@ -141,4 +141,18 @@ a = list(map(int, input()))
 print(reduce(mul,a))
 
 
+# https://stepik.org/lesson/296970/step/6?unit=278698
+# Creation a function count_letters, which takes as input a phrase and counts how many lowercase (K) and uppercase (N) letters it contains, all other characters are ignored. The function should display information about the letters found in a particular format. 
+# Number of capital letters: N. Number of lowercase characters: K
+# Write  only the definition of the function count_letters.
 
+
+def count_letters(letter):
+    N, K = 0, 0
+    for i in letter:
+        if i.islower(): 
+            K +=1 
+        elif i.isupper():
+            N += 1
+    print(f'Количество заглавных символов: {N}')  
+    print(f'Количество строчных символов: {K}') 
