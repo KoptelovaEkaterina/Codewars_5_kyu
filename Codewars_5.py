@@ -1,3 +1,5 @@
+# Codewars_5_kyu_makу_distance_short
+
 from itertools import combinations
 def choose_best_sum(t, k, ls):
     # your code t - sum miles,  k - number towns, ls - string
@@ -12,6 +14,8 @@ def choose_best_sum(t, k, ls):
         return a[0]
     return None
 
+
+# Create Codewars_5_kyu_divition
 
 def variance(numbers): 
     # your code here
