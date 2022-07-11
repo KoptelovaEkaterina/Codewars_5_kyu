@@ -29,5 +29,5 @@ def run_perimeter(width, height):
     x = 2 * (width + height)
     print(f'Периметр прямоугольника, равен {x}')
 
-
+# args
 run_perimeter(*map(int, input().split()))
