@@ -25,6 +25,23 @@ def translate_rna_to_protein(seq):
 print(translate_rna_to_protein(seq))
 
 
+# Counting Point Mutations
+
+lines, nuc_list = [], []
+list1, list2 = '', ''
+
+with open("rosalind_hamm.txt") as file:
+    for line in file:
+        lines.append(line.strip())
+
+list1, list2 = list(lines[0]), list(lines[1])
+
+for i in range(len(list1)):
+    if list1[i] != list2[i]: 
+        nuc_list.append(list1[i]) 
+print(len(nuc_list))
+
+
 # Counting letters 'A', 'C', 'G', 'T' in string of file rosalind_dna.txt
 
 with open("rosalind_dna.txt") as file:
