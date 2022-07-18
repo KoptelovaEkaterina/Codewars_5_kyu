@@ -4,7 +4,7 @@ with open("rosalind_prot.txt") as file:
     seq = file.readline().rstrip("\n")     
 
     
-table = {"UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L", "UCU":"S", 
+vocabulary = {"UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L", "UCU":"S", 
         "UCC":"S", "UCA":"S", "UCG":"S", "UAU":"Y", "UAC":"Y", "UAA":"", "UAG":"", 
         "UGU":"C", "UGC":"C", "UGA":"", "UGG":"W", "CUU":"L", "CUC":"L", "CUA":"L", "CUG":"L", "CCU":"P", 
         "CCC":"P", "CCA":"P", "CCG":"P", "CAU":"H", "CAC":"H", "CAA":"Q", "CAG":"Q", "CGU":"R", "CGC":"R", "CGA":"R", 
@@ -18,7 +18,7 @@ def translate_rna_to_protein(seq):
     protein =""
     for nuc in range(0, len(seq), 3):
         codon = seq[nuc:nuc + 3]
-        protein += table[codon]  
+        protein += vocabulary[codon]  
     print(protein)
 
 
