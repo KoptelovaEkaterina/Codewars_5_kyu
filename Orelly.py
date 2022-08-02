@@ -1,5 +1,5 @@
 
-# excersises from orelly textbook
+# excersises in orelly textbook
 
 import turtle
 
